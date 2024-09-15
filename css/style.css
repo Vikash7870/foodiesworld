@@ -1,0 +1,740 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth
+}
+
+/* <!-------------------NavBar-----------> */
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i');
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@100;200;500;800&family=Montserrat:wght@100;600&family=Roboto+Condensed:wght@300&display=swap');
+
+
+body {
+    font-family: "Roboto", sans-serif;
+
+    /* --mdb-body-bg: #dfeddd; */
+    --mdb-body-bg: #95D1CC;
+    
+}
+
+i {
+    margin-right: 10px;
+}
+
+article {
+    margin: 0 50px;
+}
+
+/* <!---------for nav scroll sticky----------------> */
+
+.affix {
+    top: 0;
+    width: 100%;
+    z-index: 9999 !important;
+}
+
+.affix+.container-fluid {
+    padding-top: 70px;
+}
+
+/* <!----------End---------------> */
+
+/* <!-----------------Header---------------> */
+.container1 {
+    width: 100%;
+    height: 90px;
+    background-color: #95D1CC;
+}
+
+.container2 {
+    background-image: url("header.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 80px;
+
+}
+
+.container2 h1 {
+    font-family: "Sofia", sans-serif;
+    font-size: 4rem;
+    position: absolute;
+    /* margin-left: 200px; */
+    left: 20%;
+    top: 2px;
+    color: white;
+}
+
+span {
+    color: #95D1CC;
+    font-family: "Sofia", sans-serif;
+}
+
+/*----------bootstrap-navbar-css------------*/
+.navbar-logo {
+    padding: 1px;
+    color: #ffffff8a;
+}
+
+.home-logo i {
+    color: white;
+    font-size: 28px;
+    margin: 5px;
+    margin-left: 80px;
+
+}
+
+.navbar-brand i {
+    font-size: 2rem;
+    padding: 5px;
+    color: #526D82;
+
+}
+
+.navbar-logo img {
+    margin-left: 20px;
+    width: 70px;
+    height: 70px;
+}
+
+.navbar-brand i {
+    font-size: 1.6rem;
+    background-color: white;
+    color: #526D82;
+    padding: 7px;
+    border-radius: 50%;
+    margin-top: 20px;
+
+}
+ 
+
+.social-icon-top {
+    position: absolute;
+    right: 65px;
+}
+
+.shop-icon {
+    color: white;
+    margin-right: 80px;
+    margin-left: 20px;
+    margin-top: 15px;
+    font-size: 23px;
+}
+
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+}
+
+.navbar-mainbg {
+    background-color: #526D82;
+    padding: 0px;
+}
+
+#navbarSupportedContent {
+    overflow: hidden;
+    position: relative;
+}
+
+#navbarSupportedContent ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+#navbarSupportedContent ul li a i {
+    margin-right: 10px;
+}
+
+#navbarSupportedContent li {
+    list-style-type: none;
+    float: left;
+}
+
+#navbarSupportedContent ul li a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    padding: 20px 20px;
+    transition-duration: 0.6s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: relative;
+}
+
+#navbarSupportedContent>ul>li.active>a {
+    color: #ffffff;
+    background-color: transparent;
+    transition: all 0.7s;
+}
+
+#navbarSupportedContent a:not(:only-child):after {
+    content: "\f105";
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 14px;
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+    transition: 0.5s;
+}
+
+#navbarSupportedContent .active>a:not(:only-child):after {
+    transform: rotate(90deg);
+}
+
+.hori-selector {
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    transition-duration: 0.6s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    background-color: #9DB2BF;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-top: 10px;
+}
+
+.hori-selector .right,
+.hori-selector .left {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #9DB2BF;
+    bottom: 10px;
+}
+
+.hori-selector .right {
+    right: -25px;
+}
+
+.hori-selector .left {
+    left: -25px;
+}
+
+.hori-selector .right:before,
+.hori-selector .left:before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #526D82;
+}
+
+.hori-selector .right:before {
+    bottom: 0;
+    right: -25px;
+}
+
+.hori-selector .left:before {
+    bottom: 0;
+    left: -25px;
+}
+
+#custom-nav {
+    box-shadow: 0px 15px 10px -15px #111;
+}
+
+@media (min-width: 992px) {
+
+
+
+    /* <!-------------nav----------------> */
+    .navbar-expand-custom {
+        -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        padding: 9px 0;
+    }
+
+    .navbar-expand-custom .navbar-nav {
+        -ms-flex-direction: row;
+        flex-direction: row;
+
+    }
+
+    .navbar-expand-custom .navbar-toggler {
+        display: none;
+
+    }
+
+    .navbar-expand-custom .navbar-collapse {
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+
+    }
+
+}
+
+@media (max-width: 991px) {
+
+    /* <!-----------Header------------> */
+    .container1 {
+        width: 100%;
+        height: 80px;
+        background-color: #95D1CC;
+    }
+
+    .container2 {
+        background-image: url("header.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 60px;
+
+    }
+
+    .container2 h1 {
+        font-family: "Sofia", sans-serif;
+        font-size: 2rem;
+        left: 13%;
+        top: 7px;
+        color: white;
+    }
+
+    span {
+        color: #95D1CC;
+        font-family: "Sofia", sans-serif;
+    }
+
+    .navbar-logo {
+        padding: 1px;
+        color: #ffffff8a;
+    }
+
+    .home-logo i {
+        color: white;
+        font-size: 2rem;
+        margin: 5px;
+
+    }
+
+    .navbar-brand i {
+        font-size: 2rem;
+        padding: 5px;
+        color: #526D82;
+
+    }
+
+    .navbar-logo img {
+        position: absolute;
+        left: -15px;
+        top: 3px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .navbar-brand i {
+        font-size: 1rem;
+        background-color: white;
+        color: #526D82;
+        padding: 7px;
+        border-radius: 50%;
+        margin-top: 15px;
+
+    }
+
+    .social-icon-top {
+        position: absolute;
+        right: 65px;
+        top: 4px;
+    }
+
+    #navbarSupportedContent ul li a {
+        padding: 12px 30px;
+    }
+
+    .hori-selector {
+        margin-top: 0px;
+        margin-left: 10px;
+        border-radius: 0;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+    }
+
+    .hori-selector .left,
+    .hori-selector .right {
+        right: 10px;
+    }
+
+    .hori-selector .left {
+        top: -25px;
+        left: auto;
+    }
+
+    .hori-selector .right {
+        bottom: -25px;
+    }
+
+    .hori-selector .left:before {
+        left: -25px;
+        top: -25px;
+    }
+
+    .hori-selector .right:before {
+        bottom: -25px;
+        left: -25px;
+    }
+
+    .left-book {
+        /* background-image: url("header.png"); */
+    }
+
+    .right-book {
+        background-color: #526D82;
+        border-radius: 7px;
+    }
+
+}
+
+/* <!----------For Small Devices----------------> */
+@media (max-width: 725px) {
+
+    /* <!-----------Header------------> */
+    .container1 {
+        width: 100%;
+        height: 80px;
+        background-color: #95D1CC;
+    }
+
+    .container2 {
+        background-image: url("header.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 60px;
+
+    }
+
+    .container2 h1 {
+        font-family: "Sofia", sans-serif;
+        font-size: 1.5rem;
+        left: 13%;
+        top: 3px;
+        color: white;
+    }
+
+
+
+    .home-logo i {
+        color: white;
+        font-size: 2rem;
+        margin: 5px;
+
+    }
+
+    .navbar-brand i {
+        font-size: 2rem;
+        padding: 5px;
+        color: #526D82;
+
+    }
+
+    .navbar-logo img {
+        position: absolute;
+        left: -15px;
+        top: 3px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .navbar-brand i {
+        font-size: 8px;
+        background-color: white;
+        color: #526D82;
+        padding: 5px;
+        border-radius: 50%;
+        margin-top: 27px;
+
+    }
+
+    .social-icon-top {
+        position: absolute;
+        right: 100px;
+        top: 5px;
+    }
+}
+
+/* <!----------For Small Devices----------------> */
+@media (max-width: 467px) {
+
+    /* <!-----------Header------------> */
+    .container1 {
+        width: 100%;
+        height: 80px;
+        background-color: #95D1CC;
+    }
+
+    .container2 {
+        background-image: url("header.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 60px;
+
+    }
+
+    .container2 h1 {
+        font-family: "Sofia", sans-serif;
+        font-size: 1.5rem;
+        position: absolute;
+        left: 53%;
+        top: 3px;
+        color: white;
+        overflow: hidden;
+    }
+
+    .navbar-logo img {
+        overflow: hidden;
+        position: absolute;
+        left: 95%;
+        top: 3px;
+        width: 30px;
+        height: 30px;
+        display: none;
+    }
+
+    .social-icon-top {
+        position: absolute;
+        right: 100px;
+        top: 5px;
+    }
+
+    .navbar-brand i {
+        font-size: 15px;
+        padding: 5px;
+        color: #528082;
+
+    }
+}
+
+@media (max-width: 314px) {
+
+    /* <!-----------Header------------> */
+    .container1 {
+        width: 100%;
+        height: 80px;
+        background-color: #95D1CC;
+        display: none;
+    }
+
+    .container2 {
+        background-image: url("header.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 60px;
+        display: none;
+
+    }
+
+    .container2 h1 {
+        font-family: "Sofia", sans-serif;
+        font-size: 1.5rem;
+        position: absolute;
+        left: 53%;
+        top: 3px;
+        color: white;
+        overflow: hidden;
+        display: none;
+    }
+
+    .navbar-logo img {
+        overflow: hidden;
+        position: absolute;
+        left: 95%;
+        top: 3px;
+        width: 30px;
+        height: 30px;
+        display: none;
+    }
+
+    .navbar-brand i {
+        font-size: 15px;
+        padding: 5px;
+        color: #528082;
+        display: none;
+
+    }
+}
+
+
+/*----------showcase------------*/
+#carouselExampleCaptions {
+    background-attachment: fixed;
+}
+
+.scroll-erow i {
+    font-size: 2rem;
+    color: #000000;
+    padding: 7px;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-left: 50%;
+}
+
+/* <!--------------------About-------------------> */
+
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+
+.headding-about {
+
+    font-size: 40px;
+    color: #526D82;
+    text-align: start;
+    margin: 10px 50px;
+}
+
+.white-section {
+    padding: 20px 10px 0px 10px;
+}
+
+.right img {
+    width: 70%;
+    height: 70%;
+    box-sizing: border-box;
+    border-radius: 100%;
+    border: 5px solid #526D82;
+    /* margin: 10px 0px; */
+    display: block;
+    margin-left: 130px;
+    margin-top: 80px;
+
+
+    /* margin-top: 60px; */
+
+}
+
+.headding-about {
+    margin-top: 80px;
+    text-align: center;
+}
+
+/* <!-------------------Book Table--------------> */
+.container-table img {
+    width: 100%;
+    height: 100%;
+}
+
+form {
+    margin: 0px 50px;
+    border-radius: 10px;
+
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    margin: 10px 0px;
+    border-radius: 5px;
+    padding: 0px 10px;
+    font-size: 15px;
+}
+
+.btn-book {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 40px;
+    border-radius: 6px;
+    background-color: red;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.row-book {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-image: url("booktable.png");
+    background-size: cover;
+
+}
+
+.book {
+    color: white;
+    font-size: 50px;
+    margin-left: 40px;
+
+}
+
+hr {
+    height: 2px;
+    background-color: #ffffff;
+    border: none;
+}
+
+label {
+    color: white;
+}
+
+/* <!----------------Food Menu--------------> */
+.food-menu {
+    margin-top: 80px;
+    font-size: 3rem;
+    margin-left: 70px;
+
+}
+
+#ex1 {
+    margin-top: 30px;
+}
+
+.tab-pane {
+    display: flex;
+}
+
+.tab-pane ul li {
+    list-style: none;
+    margin: 7px 0px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #526D82;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+/* <!-----------------Popular Food-----------------> */
+.card-main {
+    margin: 100px 50px
+}
+
+.btn-more {
+
+    display: inline;
+    position: absolute;
+    right: 50px;
+    margin-top: 20px;
+
+}
+
+/* < !--------------Footer---------------> */
+.text-center {
+    background-color: #526D82;
+    color: white;
+    padding: 20px 0px;
+    margin-top: 80px;
+}
+.fab{
+    color: #ffffff;
+}
